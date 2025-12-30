@@ -1,0 +1,37 @@
+============================================================
+Assignment 5: TSP with Neighborhoods
+============================================================
+
+Bu çalışmada, TSP problemi neighborhoods (bölgeler) ile genişletilmiştir.
+Her şehir artık sabit bir nokta değil, sürekli bir bölgedir (daire veya poligon).
+Çözücüler, her bölge içinden optimal noktaları seçerek tur uzunluğunu minimize eder.
+
+Neighborhood Type: circle
+Number of Nodes: 15
+Number of Topologies: 10
+OR-Tools available: False
+Folium available: True
+
+------------------------------------------------------------
+Summary Statistics:
+------------------------------------------------------------
+
+                 tour_length              runtime          
+                        mean       std       mean       std
+method                                                     
+GeneticAlgorithm    2.695575  0.318292  17.363797  2.273615
+Heuristic           2.802025  0.487890   0.007438  0.001901
+SA                  3.531991  0.504529   2.160382  0.320355
+
+------------------------------------------------------------
+Methods:
+------------------------------------------------------------
+1. Heuristic: Nearest Neighbor + 2-opt + Optimal Point Selection
+2. Simulated Annealing: SA with optimal point selection in neighborhoods
+3. Genetic Algorithm: AI-based approach with population search
+
+Key Observations:
+- Neighborhoods problemi daha karmaşık hale getirir
+- Optimal nokta seçimi tur kalitesini önemli ölçüde etkiler
+- Genetic Algorithm, popülasyon tabanlı arama sayesinde iyi sonuçlar üretir
+- Runtime, optimal nokta seçimi nedeniyle artmıştır
